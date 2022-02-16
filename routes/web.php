@@ -15,15 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () { // root route or base route
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/about', function () {
-    return "about";
+    return view('about');
 });
 
 Route::get('/contact', function () {
-    return "contact";
+    return view('contact');
 });
 
 
