@@ -26,7 +26,7 @@ Route::get(md5('about-us'), function () {
 
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact');  //
 });
 
 Route::get('/basicM', function () {
