@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-// Route::get('/', function () { // root route or base route
-//     return view('index');
-// });
+Route::get('/', function () { // root route or base route
+    return view('index');
+});
 
-Route::view('/', 'index');
+// Route::view('/', 'index');
 
 Route::get(md5('about-us'), function () {
     return view('about'); 
@@ -28,6 +28,11 @@ Route::get(md5('about-us'), function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/basicM', function () {
+    return view('list');
+})->middleware('basicM');
+// });
 
 
 
