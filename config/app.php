@@ -175,6 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\TestServiceProvider::class,
+        App\Providers\CustomeServiceProvider::class,
 
     ],
 
@@ -230,6 +231,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'nayeem' => App\Repositories\TestFacades::class,
 
     ],
 

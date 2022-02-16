@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/testone', function () {
+    nayeem::add();
+});
+
+Route::get('/test_one', function () {
+    nayeem::add_one();
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
