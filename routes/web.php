@@ -19,7 +19,8 @@ Route::get('/', function () { // root route or base route
 });
 
 Route::get('/about', function () {
-    return view('about');
+    // return view('about');
+    return redirect('/contact');
 });
 
 Route::get('/contact', function () {
