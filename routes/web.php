@@ -20,15 +20,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'index');
 
-Route::get('/about', function () {
-    return view('about');
-    // return redirect('/contact');
-});
+Route::get('/facebook.com/about-us', function () {
+    return view('about'); 
+})->name('about.us'); //name route
 
 
-Route::get('/contact/{roll}', function ($roll) {
-    // return view('contact');
-    return "My roll is $roll";
+Route::get('/contact', function () {
+    return view('contact');
 });
 
 
