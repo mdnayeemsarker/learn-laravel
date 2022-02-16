@@ -26,8 +26,9 @@ Route::get('/about', function () {
 });
 
 
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/contact/{roll}', function ($roll) {
+    // return view('contact');
+    return "My roll is $roll";
 });
 
 
