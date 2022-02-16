@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'index');
 
-Route::get('/facebook.com/about-us', function () {
+Route::get(md5('about-us'), function () {
     return view('about'); 
 })->name('about.us'); //name route
 
