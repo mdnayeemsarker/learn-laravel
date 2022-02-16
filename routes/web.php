@@ -13,9 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+
+Route::get('/', function () { // root route or base route
     return view('welcome');
 });
+
+Route::get('/about', function () {
+    return "about";
+});
+
+Route::get('/contact', function () {
+    return "contact";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route::get('/testone', function () {
     nayeem::add();
