@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Controllers\FirstController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,19 +37,8 @@ Route::get('/basicM', function () {
 // });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Route::post('/students/info', [FirstController::class, 'studentinfo']) ->name('student.info');
+Route::post('/about/info', [FirstController::class, 'aboutinfo']) ->name('about.info');
 
 
 
