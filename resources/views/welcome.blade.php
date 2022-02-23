@@ -71,6 +71,9 @@
     </div>
 
     <div class="container">
+
+        Welcome to {{ $name }}
+
         @yield('content')
     </div>
 

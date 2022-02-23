@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\FirstController;
+use App\Http\Controllers\SecondController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,18 +18,18 @@ use App\Http\Controllers\FirstController;
 
 
 Route::get('/', function () { // root route or base route
-    return view('index');
+    return view('index', ['name' => 'Nayeem']);
 });
 
 // Route::view('/', 'index');
 
 Route::get(md5('about-us'), function () {
-    return view('about'); 
+    return view('about', ['name' => 'About']); 
 })->name('about.us'); //name route
 
 
 Route::get('/contact', function () {
-    return view('contact');  //
+    return view('contact', ['name' => 'Contact']);  //
 });
 
 Route::get('/basicM', function () {
@@ -39,6 +40,8 @@ Route::get('/basicM', function () {
 
 Route::post('/students/info', [FirstController::class, 'studentinfo']) ->name('student.info');
 Route::post('/about/info', [FirstController::class, 'aboutinfo']) ->name('about.info');
+
+Route::get('/nayeemasha', [SecondController::class, 'nayeemasha']);
 
 
 
