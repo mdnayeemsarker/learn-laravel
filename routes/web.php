@@ -31,6 +31,8 @@ Route::get('Authentication', function () {
     return view('custom_auth', ['name' => 'Authentactaion']); 
 })->name('custom.auth'); //name route
 
+Route::post('/store/contact', [FirstController::class, 'store'])->name('store.contact');
+
 
 Route::get('/contact', function () {
     return view('contact', ['name' => 'Contact']);  //

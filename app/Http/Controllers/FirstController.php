@@ -25,4 +25,15 @@ class FirstController extends Controller
     public function aboutinfo(Request $request){
         dd($request->all());
     }
+
+    public function store (Request $request){
+        
+         $validated = $request->validate([
+            'name' => 'required|max:55',
+            'email' => 'required',
+            'password' => 'required|min:6|max:12',
+        ]);
+
+        dd($request->all());
+    }
 }
