@@ -43,6 +43,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('contact') }}">Contact Us</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('custom.auth') }}">Validation</a>
+                        </li>
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

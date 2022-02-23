@@ -27,6 +27,10 @@ Route::get(md5('about-us'), function () {
     return view('about', ['name' => 'About']); 
 })->name('about.us'); //name route
 
+Route::get('Authentication', function () {
+    return view('custom_auth', ['name' => 'Authentactaion']); 
+})->name('custom.auth'); //name route
+
 
 Route::get('/contact', function () {
     return view('contact', ['name' => 'Contact']);  //
